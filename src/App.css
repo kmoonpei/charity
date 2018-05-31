@@ -1,10 +1,9 @@
 .App {
   text-align: center;
-  background: url('../marterial/logo1.png')
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  /* animation: App-logo-spin infinite 20s linear; */
   height: 80px;
 }
 
@@ -17,6 +16,7 @@
 
 .App-title {
   font-size: 1.5em;
+  /* background: url('./material/logo1.png') */
 }
 
 .App-intro {
