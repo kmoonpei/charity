@@ -9,12 +9,14 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo1} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
         </header>
         {/* <div className=""></div> */}
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="center-part">
+          <h1 className="App-title">Welcome to React</h1>
+          <p className="App-intro">
+            To get started, edit <code>src/App.js</code> and save to reload.
+          </p>
+        </div>
       </div>
     );
   }
