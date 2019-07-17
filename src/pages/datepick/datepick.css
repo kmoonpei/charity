@@ -1,0 +1,11 @@
+.contanier {
+    display: flex;
+    flex-direction: column;
+}
+.data_picker {
+    width:200px;
+}
+.btn {
+    width:100px;
+    margin:10px;
+}
