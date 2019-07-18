@@ -1,0 +1,38 @@
+// {
+//     "presets": [
+//       "es2015",
+//       "stage-1",
+//       "react"
+//     ],
+//     "plugins": ["transform-decorators-legacy"]
+//   }
+
+// {
+//   "presets": [
+//     "es2015",
+//     "stage-1"
+//   ],
+//   "plugins": [
+//     "transform-decorators-legacy"
+//   ]
+// }
+
+// {
+//   "presets": ["@babel/preset-env"],
+//   "plugins": [
+//       ["@babel/plugin-proposal-decorators", { "legacy": true }],
+//       ["@babel/plugin-proposal-class-properties", { "loose": true }]
+//   ]
+// }
+
+{
+  "presets": ["module:metro-react-native-babel-preset"],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ]
+  ]
+}

@@ -5,6 +5,7 @@ import { DatePicker, Button } from 'antd';
 import 'antd/dist/antd.css';
 import Nav from '../../components/Nav/nav';
 import TodoList from './todolist/todolist';
+import Select from './select/select';
 
 export default class DatePick extends Component {
     constructor(props) {
@@ -16,11 +17,13 @@ export default class DatePick extends Component {
     }
     render() {
         return (
-            <div className='contanier'>
+            <div className='conta'>
                 <Nav />
                 <DatePicker className='data_picker' />
                 <Button onClick={this.goDetail} type="primary" className='btn'>detail page</Button>
                 <TodoList />
+                <Select values={["State.", "Should.", "Be.", "Synchronous."]}
+                    onSelect={value => console.log(value)} />
             </div>
 
         )
