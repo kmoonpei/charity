@@ -1,7 +1,12 @@
-.nav_ul {
-    list-style: none;
-    
-  }
-  .nav_li {
-  
-  }
+.logo_wp {
+  float: left;
+  height: 60px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App-logo {
+  /* animation: App-logo-spin infinite 20s linear; */
+  height: 50px;
+}

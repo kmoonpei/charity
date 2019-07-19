@@ -19,7 +19,6 @@ class TodoList extends Component {
         e.preventDefault();
         // let { store } = this.props;
         let { inputTile } = this.state;
-
         TodoLists.createTodo(inputTile);
 
         // 创建完新的条目之后，要清空输入框
