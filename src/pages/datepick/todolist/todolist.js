@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import TodoLists from '../../../store/todolist';
-import DevTools from 'mobx-react-devtools'
 import {compose} from 'recompose';
 
-// @inject('TodoLists')
-// @observer
+@inject('TodoLists')
+@observer
 class TodoList extends Component {
     constructor(props) {
         super(props);
@@ -66,13 +65,13 @@ class TodoList extends Component {
                         </li>
                     })}
                 </ul>
-                <span>{TodoLists.left}</span>
+                <span>还剩 {TodoLists.left} 个待办未处理</span>
             </div >
         )
     }
 }
-export default observer(TodoList);//不使用装饰器的方法
-// export default TodoList;
+// export default observer(TodoList);//不使用装饰器的方法
+export default TodoList;
 
 // export default compose(
 //     observer,

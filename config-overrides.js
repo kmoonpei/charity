@@ -1,9 +1,5 @@
-const { override, addDecoratorsLegacy } = require('customize-cra');
+const { override, addDecoratorsLegacy, disableEsLint } = require('customize-cra');
 module.exports = override(
-    addDecoratorsLegacy()
+    addDecoratorsLegacy(),
+    disableEsLint(),
 );
-
-// module.exports = function override(config, env) {
-//     //do stuff with the webpack config...
-//     return config;
-//   }

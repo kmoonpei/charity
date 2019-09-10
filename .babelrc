@@ -1,38 +1,9 @@
-// {
-//     "presets": [
-//       "es2015",
-//       "stage-1",
-//       "react"
-//     ],
-//     "plugins": ["transform-decorators-legacy"]
-//   }
 
-// {
-//   "presets": [
-//     "es2015",
-//     "stage-1"
-//   ],
-//   "plugins": [
-//     "transform-decorators-legacy"
-//   ]
-// }
-
-// {
-//   "presets": ["@babel/preset-env"],
-//   "plugins": [
-//       ["@babel/plugin-proposal-decorators", { "legacy": true }],
-//       ["@babel/plugin-proposal-class-properties", { "loose": true }]
-//   ]
-// }
-
+//create-react-app项目eject 后babel的配置文件，也可在package.json里配置"babel":{}
 {
-  "presets": ["module:metro-react-native-babel-preset"],
+  "presets": ["react-app"],
   "plugins": [
-    [
-      "@babel/plugin-proposal-decorators",
-      {
-        "legacy": true
-      }
-    ]
+      ["@babel/plugin-proposal-decorators", { "legacy": true }],
+      ["@babel/plugin-proposal-class-properties", { "loose": true }]
   ]
 }

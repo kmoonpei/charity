@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import logo1 from '../../material/logo1.png'
 import './home.css';
+import Login from './login/login';
 
+const HocLogin = logProps(Login);
 export default class Home extends Component {
     render() {
         return (
@@ -9,33 +11,30 @@ export default class Home extends Component {
                 <div className="center-part">
                     <h1 className="App-title">Welcome to React</h1>
                     <p className="App-intro">To get started, edit <code>src/App.js</code> and save to reload.</p>
-                    <Parent />
+                </div>
+                <div>
+                    {/* <Login /> */}
+                    <HocLogin someThing={'nnnn'}/>
                 </div>
             </div>
         );
     }
 }
-function CustomTextInput(props) {
-    return (
-        <div style={{ width: 100, height: 100, backgroundColor: '#fff', marginLeft: 40 }} onClick={() => props.getFocu()}>
-            <input ref={props.inputRef} />
-        </div>
-    );
-}
 
-class Parent extends React.Component {
-    constructor(props) {
-        super(props);
-        this.inputElement = React.createRef();
-    }
-    render() {
-        return (
-            <CustomTextInput inputRef={this.inputElement} getFocu={this.getFocu.bind(this)} />
-        );
-    }
-    getFocu() {
-        this.inputElement.current.focus();
+
+
+function logProps(WrappedComponent) {
+    return class extends React.Component {
+        componentWillReceiveProps(nextProps) {
+            console.log('Current props: ', this.props);
+            console.log('Next props: ', nextProps);
+        }
+        componentDidMount(){
+            console.log('HOC props:',this.props)
+        }
+        render() {
+            // 将 input 组件包装在容器中，而不对其进行修改。Good!
+            return <WrappedComponent {...this.props} />;
+        }
     }
 }
-
-

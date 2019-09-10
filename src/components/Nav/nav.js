@@ -18,7 +18,7 @@ class Nav extends Component {
     constructor(props) {
         super(props);
         this.state={
-            nankey:['2'],
+            nankey:['1'],
         }
     }
     componentDidMount() {
